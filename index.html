@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ByFan</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navegador">
+            <div class="presentación">
+                <ul class="nav justify-content-center">
+                    <li class="lista">
+                        <a class="nav-link text-light">Cosplays</a>
+                    </li>
+                    <li class="lista">
+                        <a class="nav-link text-light">Mangas</a>
+                    </li>
+                    <li class="lista">
+                        <div class="logo"><a class="nav-link text-light"><img class="imagen"
+                                    src="/imagenes/Sin título-1.gif"></a></div>
+                    </li>
+                    <li class="lista">
+                        <a class="nav-link text-light">Accesorios</a>
+                    </li>
+                    <li class="lista">
+                        <a class="nav-link text-light">Figuras</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="contenedor">
+            <h1 class="titulo">Productos</h1>
+            <br><br>
+            <div class="celda">
+        </div>
+        <br><br><br><br>
+        <div>
+            <h2 class="text-center" id="heading">Carrito De Compras</h2>
+            <table id="producto" class="table">
+                <thead class="thead-dark">
+                     <tr id="trid">
+                        <th># item</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precion Unitario</th>
+                        <th></th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                 <tbody id="items" class="table-striped"></tbody>
+                <tfoot>
+                      <tr>
+                          <th id="total"></th>
+                     </tr>
+                 </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/items.js"></script>
+
+</body>
+
+</html>

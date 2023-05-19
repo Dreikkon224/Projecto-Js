@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "image": "/imagenes/BNH.jpg",
+        "nombre": "Boku No Hero Academy",
+        "precio": 2.300
+    },
+    {
+        "id": 2,
+        "image": "/imagenes/KNB.jpg",
+        "nombre": "Kimetsu No Yaiba",
+        "precio": 2.000
+    },
+    {
+        "id": 3,
+        "image": "/imagenes/OP.jpg",
+        "nombre": "One Piece",
+        "precio": 2.000
+    },
+    {
+        "id": 4,
+        "image": "/imagenes/CM.jpg",
+        "nombre": "Chainsaw Man",
+        "precio": 1.800
+    },
+    {
+        "id": 5,
+        "image": "/imagenes/Albedo-Figura.jpg",
+        "nombre": "Figura de Albedo Overlor",
+        "precio": 49
+    },
+    {
+        "id": 6,
+        "image": "/imagenes/Naruto-Figura.jpg",
+        "nombre": "Figura de Naruto Shipuden",
+        "precio": 364
+    },
+    {
+        "id": 7,
+        "image": "/imagenes/Levi-figura.jpg",
+        "nombre": "Figura de Levi Ackerman",
+        "precio": 214
+    },
+    {
+        "id": 8,
+        "image": "/imagenes/Erza-Figura.jpg",
+        "nombre": "Figura de Erza Scarlet",
+        "precio": 226
+    }
+]

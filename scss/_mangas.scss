@@ -1,0 +1,17 @@
+.titulo{
+    text-align: center;
+}
+.celda{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    .img{
+        width: 173px;
+        height: 267px;
+    }
+    .Figuras{
+        width: 188px;
+        height: 198px;
+    }
+}
