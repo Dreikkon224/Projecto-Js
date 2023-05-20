@@ -5,7 +5,7 @@ class Producto{
     id;
     precio;
 
-constructor(id,nombre,cantidad, id, precio){
+constructor(id,nombre,cantidad,precio){
     this.id = id
     this.nombre = nombre
     this.cantidad = cantidad

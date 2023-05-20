@@ -3,25 +3,25 @@
         "id": 1,
         "image": "/imagenes/BNH.jpg",
         "nombre": "Boku No Hero Academy",
-        "precio": 2.300
+        "precio": 2300
     },
     {
         "id": 2,
         "image": "/imagenes/KNB.jpg",
         "nombre": "Kimetsu No Yaiba",
-        "precio": 2.000
+        "precio": 2000
     },
     {
         "id": 3,
         "image": "/imagenes/OP.jpg",
         "nombre": "One Piece",
-        "precio": 2.000
+        "precio": 2000
     },
     {
         "id": 4,
         "image": "/imagenes/CM.jpg",
         "nombre": "Chainsaw Man",
-        "precio": 1.800
+        "precio": 1800
     },
     {
         "id": 5,
