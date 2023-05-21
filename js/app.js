@@ -1,5 +1,5 @@
 const contenedor = document.getElementById('contenedor')
-const boton = document.getElementById("boton");
+
 
 let carrito = []
 
@@ -60,16 +60,6 @@ function generarProductos() {
 
 
 
-boton.addEventListener('click', () => {
-    const producto = celda.find ((item) =>{
-        return item.id === +boton.dataset.id
-    });
-    carrito.push(producto);
-    localStorage.setItem('carrito',JSON.stringify(carrito));
-    mostrarCarrito();
-})
-
-
 function mostrarCarrito() {
     const tabla = document.getElementById("items");
     tabla.innerHTML = ``;
@@ -78,10 +68,10 @@ function mostrarCarrito() {
     carrito.forEach((producto) => {
         tabla.innerHTML += `
             <tr>
-                <td>${counter}</td>
+                <td>${id}</td>
                 <td>${producto.nombre}</td>
                 <td>${producto.cantidad}</td>
-                <td>${producto.precio}</td>
+                <th>${Cantidad}/th>
             </tr>
         `;
         counter++;
