@@ -63,13 +63,7 @@ function generarProductos() {
 }
 
 function agregarAlCarrito(producto) {
-    const index = carrito.findIndex(producto => producto.id === producto);
-    if (index != -1) {
-        carrito[index].cantidad += 1;
-    }
-    else {
         carrito.push(producto);
-    }
         localStorage.setItem("carrito", JSON.stringify(carrito));
         mostrarCarrito()
  
