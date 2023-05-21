@@ -1,6 +1,5 @@
 const contenedor = document.getElementById('contenedor')
 
-
 let carrito = []
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -33,14 +32,15 @@ function generarProductos() {
     row.classList.add('celda');
     row.innerHTML = ``;
     let counter = 1;
-    productos.forEach((producto) => {
+    productos.forEach((producto, index) => {
+        const botonComprar = `boton${index}`
         if (counter <= 8) {
             row.innerHTML += `
                 <div>
                     <div><img class="img" src="${producto.image}"></div>
                     <div><a href="#">${producto.nombre}</a></div>
                     <div><span>$${producto.precio}</span></div>
-                    <div><button id="boton" data-id="${producto.id}" type="button" class="btn btn-outline-danger ">comprar</button>
+                    <div><button id="${botonComprar}" data-id="${producto.id}" type="button" class="btn btn-outline-danger ">comprar</button>
                     </div>
                 </div>
                
@@ -56,9 +56,17 @@ function generarProductos() {
         }
     });
     contenedor.appendChild(row);
+    productos.forEach((producto, index) => {
+        const boton = document.getElementById(`boton${index}`);
+        boton.addEventListener("click", () => agregarAlCarrito(producto));
+      });
 }
 
-
+function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarrito();
+}
 
 function mostrarCarrito() {
     const tabla = document.getElementById("items");
@@ -68,10 +76,10 @@ function mostrarCarrito() {
     carrito.forEach((producto) => {
         tabla.innerHTML += `
             <tr>
-                <td>${id}</td>
+                <td>${producto.id}</td>
                 <td>${producto.nombre}</td>
                 <td>${producto.cantidad}</td>
-                <th>${Cantidad}/th>
+                <th>${producto.precio}</th>
             </tr>
         `;
         counter++;
