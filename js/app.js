@@ -1,5 +1,5 @@
-const contenedor = document.getElementById('contenedor')
-
+const contenedor = document.getElementById('contenedor');
+const vaciar = document.getElementById('btnVaciar');
 let carrito = []
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -63,10 +63,28 @@ function generarProductos() {
 }
 
 function agregarAlCarrito(producto) {
-    carrito.push(producto);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    mostrarCarrito();
+    const index = carrito.findIndex(producto => producto.id === producto);
+    if (index != -1) {
+        carrito[index].cantidad += 1;
+    }
+    else {
+        carrito.push(producto);
+    }
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        mostrarCarrito()
+ 
+    
 }
+
+btnVaciar.addEventListener('click', vaciarCarrito)
+
+function vaciarCarrito() {
+    carrito = [];
+    mostrarCarrito();
+    localStorage.removeItem("carrito");
+}
+
+
 
 function mostrarCarrito() {
     const tabla = document.getElementById("items");
